@@ -1,0 +1,13 @@
+- name: AutoCheck JavaScript tests by Testomatio
+  uses: testomatio/check-tests@1.0.2
+  with:
+    # Test framework to be used. Supported: mocha, codeceptjs
+    framework: 
+    # Glob pattern to match tests in a project, example: tests/**_test.js
+    tests: 
+    # GitHub token to post comment with summary to current pull request
+    token: # optional
+    # Add 'has tests' label to PR when it contains new tests
+    has-tests-label: # optional
+    # Add 'no tests' label to PR when it doesn't contain new tests
+    no-tests-label: # optional
