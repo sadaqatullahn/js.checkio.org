@@ -1,23 +1,21 @@
 "use strict";
-require('../../libraries');
-var assert = require('assert');
+
+let assert = require('assert');
 
 
 function median(data) {
+    console.log(data);
     let sorted_data = data.sort(function (a, b) {
-            return a > b
+            return a - b
         }
     );
+
     let data_length = data.length;
-
-    console.log(data);
-    console.log(data_length);
-
     if ((data_length % 2) === 1) {
-        if (0 in data){
-            return data[Math.floor(data_length/2)+1]
+        if (0 in data) {
+            return sorted_data[Math.floor(data_length / 2)]
         }
-        return data[Math.floor(data_length / 2)]
+        return sorted_data[Math.floor(data_length / 2)]
     } else {
         return (
             sorted_data[Math.floor(data_length / 2)] +
